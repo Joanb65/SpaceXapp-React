@@ -40,7 +40,7 @@ body {
   display: grid;
 }
 
-.Rockets-card {
+.Rockets-card, .Rockets-item {
   text-decoration: none;
   box-shadow: 8px 14px 38px rgba(39,44,49,.06), 1px 3px 8px rgba(39,44,49,.03);
   border-radius: 5px;
@@ -48,15 +48,21 @@ body {
   display: block;
   animation-duration: 2s;
   animation-name: fade;
+  transition: transform 0.3s ease; /*Transición*/
+  cursor: pointer;
 }
 
-.Rockets-card img {
+.Rockets-card:hover, .Rockets-item:hover {
+  transform: scale(1.05); /*Hover*/
+}
+
+.Rockets-card img, .Rockets-item img {
   width: 100%;
   height: auto;
   border-radius: 5px 5px 0 0;
 }
 
-.Rockets-card h2 {
+.Rockets-card h2, .Rockets-item h2 {
   font-size: 18px;
   font-weight: 400;
   text-align: center;
@@ -67,22 +73,6 @@ body {
   font-weight: 400;
   text-align: left;
   margin: 20px;
-}
-
-.Rockets-item {
-  text-decoration: none;
-  box-shadow: 8px 14px 38px rgba(39,44,49,.06), 1px 3px 8px rgba(39,44,49,.03);
-  border-radius: 5px;
-  margin: 0 0 20px 0;
-  display: block;
-  animation-duration: 2s;
-  animation-name: fade;
-}
-
-.Rockets-item img {
-  width: 100%;
-  height: auto;
-  border-radius: 5px 5px 0 0;
 }
 
 .Rockets-item h2 {

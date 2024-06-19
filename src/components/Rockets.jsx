@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
 import getData from '../utils/getData';
 
-const RocketDetails = () => {
+const Rockets = () => {
   const { id } = useParams();
   const [launch, setLaunch] = useState(null);
 
@@ -33,6 +33,6 @@ const RocketDetails = () => {
   );
 };
 
-export default RocketDetails;
+export default Rockets;
 
 
