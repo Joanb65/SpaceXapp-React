@@ -3,10 +3,10 @@ import { useParams } from 'react-router-dom';
 import getData from '../utils/getData';
 
 const Rockets = () => {
-  const { id } = useParams();
-  const [launch, setLaunch] = useState(null);
+  const { id } = useParams(); //Obtener el ID
+  const [launch, setLaunch] = useState(null);  //Datos de lanzamiento
 
-  useEffect(() => {
+  useEffect(() => {                       // Cargar datos del cohete
     const fetchData = async () => {
       const data = await getData();
       const rocket = data.find((item) => item.id === id);
@@ -15,7 +15,7 @@ const Rockets = () => {
     fetchData();
   }, [id]);
 
-  if (!launch) {
+  if (!launch) {      //Prueba de carga
     return <div>Loading...</div>;
   }
 

@@ -3,8 +3,8 @@ import { useNavigate } from 'react-router-dom';
 import getData from '../utils/getData';
 
 const Home = () => {
-  const [launches, setLaunches] = useState([]);
-  const navigate = useNavigate();
+  const [launches, setLaunches] = useState([]);  // Estado para almacenar los lanzamientos
+  const navigate = useNavigate(); //Hook para navegar
 
   useEffect(() => {
     const fetchData = async () => {
