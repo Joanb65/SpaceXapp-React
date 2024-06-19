@@ -1,23 +1,25 @@
 import React from 'react';
-import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Header from './components/Header';
-import Home from './pages/Home';
-import RocketDetails from './pages/RocketDetails';
-import Error404 from './pages/Error404';
-import './styles/styles.css';
+import Home from './components/Home';
+import RocketDetails from './components/RocketDetails';
+import Error404 from './components/Error404';
 
-const App = () => (
-  <Router>
-    <Header />
-    <Switch>
-      <Route exact path="/" component={Home} />
-      <Route path="/:id" component={RocketDetails} />
-      <Route component={Error404} />
-    </Switch>
-  </Router>
-);
+const App = () => {
+  return (
+    <Router>
+      <Header />
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/rocket/:id" element={<RocketDetails />} />
+        <Route path="*" element={<Error404 />} />
+      </Routes>
+    </Router>
+  );
+};
 
 export default App;
+
 
 
 
