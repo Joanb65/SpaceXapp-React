@@ -49,7 +49,6 @@ body {
   animation-duration: 2s;
   animation-name: fade;
   transition: transform 0.3s ease; /*Transición*/
-  cursor: pointer;
 }
 
 .Rockets-card:hover, .Rockets-item:hover {
@@ -60,6 +59,7 @@ body {
   width: 100%;
   height: auto;
   border-radius: 5px 5px 0 0;
+  cursor: pointer;
 }
 
 .Rockets-card h2, .Rockets-item h2 {
